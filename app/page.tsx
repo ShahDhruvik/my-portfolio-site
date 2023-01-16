@@ -6,7 +6,7 @@ const Banner = () => {
   console.log('banner')
 
   return (
-    <div id="home" className="pfBanner pfBannerImg ">
+    <div className="pfBanner pfBannerImg ">
       <div className=" container mx-auto text-center text-gray-300 font-bold w-3/4 ">
         <h1 className="mb-5 text-lg md:text-2xl">
           Hi! I’m Dhruvik, I design products that delight and inspire people.

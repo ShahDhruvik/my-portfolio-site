@@ -1,0 +1,53 @@
+.pfServices {
+  @apply overflow-hidden min-h-screen flex justify-center items-center bg-[#070636]  w-full py-10 px-5;
+
+  & > .pfServicesWrapper {
+    @apply container h-full  flex flex-col justify-center items-center w-full mx-auto;
+
+    & > h3 {
+      @apply text-6xl text-center font-extrabold text-[#32BEC3] mb-10;
+    }
+
+    & > .pfServiceBox {
+      @apply px-5  h-1/2 flex-wrap flex gap-10 justify-center items-center w-full;
+
+      & > .leftBox {
+        @apply p-16 sm:p-20 h-full md:flex-1 transition ease-in-out duration-500 hover:scale-105 hover:bg-[#32BEC3] rounded-2xl bg-[#25a19f]  flex flex-col justify-center items-center gap-3;
+
+        & > h3 {
+          @apply text-center text-xl font-extrabold;
+        }
+        & > p {
+          @apply text-center text-sm font-semibold line-clamp-3;
+        }
+      }
+
+      & > .rightBox {
+        @apply p-16 sm:p-20 h-full md:flex-1 transition ease-in-out duration-500 hover:scale-105 hover:bg-[#32BEC3] rounded-2xl bg-[#25a19f] flex flex-col justify-center items-center gap-3;
+
+        & > h3 {
+          @apply text-center text-xl font-extrabold;
+        }
+        & > p {
+          @apply text-center text-sm font-semibold line-clamp-3;
+        }
+      }
+    }
+    & > .pfServiceBox {
+      animation-name: ping;
+      animation-duration: 1s;
+      animation-iteration-count: 1;
+      animation-fill-mode: backwards;
+      animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+    }
+  }
+}
+
+/* #25a19f */
+@keyframes ping {
+  75%,
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}

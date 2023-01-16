@@ -3,17 +3,18 @@ import React, { memo, useState } from 'react'
 import '../styles/header.css'
 import Close from '../assets/close.svg'
 import Menu from '../assets/menu.svg'
+import Link from 'next/link'
 
 const Header = () => {
   console.log('header')
 
   const list = [
-    { name: 'HOME', link: '#home' },
+    { name: 'HOME', link: '/' },
     { name: 'ABOUT', link: '#about' },
-    { name: 'SERVICE', link: '#service' },
-    { name: 'PROJECTS', link: '#projects' },
-    { name: 'SKILLS', link: '#skills' },
-    { name: 'CONTACT', link: '#contact' },
+    { name: 'SERVICE', link: '/services' },
+    { name: 'PROJECTS', link: '/projects' },
+    { name: 'SKILLS', link: '/skills' },
+    { name: 'CONTACT', link: '/contact' },
   ]
   const [openBtn, setopenBtn] = useState(false)
   const openNav = () => {
@@ -36,9 +37,9 @@ const Header = () => {
             {list.map((item) => {
               return (
                 <li key={item.name}>
-                  <a onClick={openNav} href={item.link}>
+                  <Link onClick={openNav} href={item.link}>
                     {item.name}
-                  </a>
+                  </Link>
                 </li>
               )
             })}
@@ -54,7 +55,7 @@ const Header = () => {
             {list.map((item) => {
               return (
                 <li key={item.name}>
-                  <a href={item.link}>{item.name}</a>
+                  <Link href={item.link}>{item.name}</Link>
                 </li>
               )
             })}
