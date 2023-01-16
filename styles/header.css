@@ -1,0 +1,85 @@
+.pfHeader {
+  @apply sticky  top-0  bg-[#070636] h-16 px-5 md:px-3 lg:px-10 z-10;
+
+  & > .pfHeaderWrapper {
+    @apply z-0  container mx-auto h-full flex justify-between items-center;
+
+    & > h1 {
+      @apply text-gray-300 text-2xl font-semibold;
+
+      & > span {
+        @apply text-lg font-bold;
+      }
+    }
+
+    & > button {
+      @apply md:hidden;
+    }
+    & > .flexedNav {
+      & > ul {
+        @apply hidden md:flex  gap-4;
+
+        & > li {
+          & > a {
+            @apply relative text-sm lg:text-base text-gray-300 font-light tracking-widest;
+
+            &::after {
+              position: absolute;
+              padding-bottom: 1px;
+              content: '';
+              width: 0px;
+              height: 0px;
+              background-color: rgb(46, 226, 226);
+              bottom: 0;
+              left: 0;
+              right: 0;
+              margin: 0px auto;
+              transition: width 500ms ease-in 100ms;
+            }
+
+            &:hover::after {
+              width: 100%;
+              z-index: 10px;
+              height: 2px;
+            }
+          }
+        }
+      }
+    }
+    & > .animatedNav {
+      @apply overflow-visible  h-screen pt-10  border-t-2 border-l-2 border-[#3dc3db];
+      position: fixed;
+      top: 0;
+      right: 0;
+      background-color: #070636;
+      width: 60%;
+      animation-name: animatedNav;
+      animation-duration: 1s;
+      animation-iteration-count: 1;
+      animation-fill-mode: forwards;
+
+      & > .closeBtn {
+        @apply absolute left-4 top-4;
+      }
+
+      & > ul {
+        @apply flex flex-col justify-center items-center gap-10;
+        & > li {
+          & > a {
+            @apply text-gray-300;
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes animatedNav {
+  from {
+    right: -1000px;
+  }
+  to {
+    right: 0px;
+    box-shadow: 10px;
+  }
+}

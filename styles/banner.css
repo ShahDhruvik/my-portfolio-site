@@ -1,0 +1,10 @@
+.pfBanner {
+  @apply min-h-screen py-20 lg:py-32;
+}
+
+.pfBannerImg {
+  background-color: #070636;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 900'%3E%3Cpolygon fill='%230fe7e5' points='957 450 539 900 1396 900'/%3E%3Cpolygon fill='%23094645' points='957 450 872.9 900 1396 900'/%3E%3Cpolygon fill='%2310d6d3' points='-60 900 398 662 816 900'/%3E%3Cpolygon fill='%23094b4b' points='337 900 398 662 816 900'/%3E%3Cpolygon fill='%2310c6c1' points='1203 546 1552 900 876 900'/%3E%3Cpolygon fill='%230a5050' points='1203 546 1552 900 1162 900'/%3E%3Cpolygon fill='%2310b6af' points='641 695 886 900 367 900'/%3E%3Cpolygon fill='%230a5556' points='587 900 641 695 886 900'/%3E%3Cpolygon fill='%230fa69e' points='1710 900 1401 632 1096 900'/%3E%3Cpolygon fill='%230b5a5c' points='1710 900 1401 632 1365 900'/%3E%3Cpolygon fill='%230d968e' points='1210 900 971 687 725 900'/%3E%3Cpolygon fill='%230b5f62' points='943 900 1210 900 971 687'/%3E%3C/svg%3E");
+  background-attachment: fixed;
+  background-size: cover;
+}
