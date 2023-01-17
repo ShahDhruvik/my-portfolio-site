@@ -1,0 +1,11 @@
+.pfProjects {
+  @apply h-screen bg-[#32BEC3] flex justify-center items-center p-5;
+
+  & > .pfProjectsWrapper {
+    @apply container h-auto mx-auto bg-[#070636] text-gray-300 rounded-3xl;
+  }
+}
+
+.sliderArea::-webkit-scrollbar {
+  display: none;
+}

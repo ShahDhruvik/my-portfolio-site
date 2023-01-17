@@ -10,7 +10,7 @@ const Header = () => {
 
   const list = [
     { name: 'HOME', link: '/' },
-    { name: 'ABOUT', link: '#about' },
+    { name: 'ABOUT', link: '/about' },
     { name: 'SERVICE', link: '/services' },
     { name: 'PROJECTS', link: '/projects' },
     { name: 'SKILLS', link: '/skills' },

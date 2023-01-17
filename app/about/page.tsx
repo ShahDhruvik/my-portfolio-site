@@ -1,11 +1,11 @@
 import Image from 'next/image'
 import React, { memo } from 'react'
-import '../styles/about.css'
+import '../../styles/about.css'
 
 const About = () => {
   console.log('About')
   return (
-    <div id="about" className="pfAbout pfAboutImg ">
+    <div className="pfAbout pfAboutImg ">
       <div className="pfAboutContainer ">
         <div className="pfAboutImg rotate-in-2-cw">
           <Image src="/myPic2.avif" width={240} alt="ME" height={240} />
